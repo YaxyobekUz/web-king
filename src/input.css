@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-Urbanist font-medium text-lg text-brand-dark-900;
+  }
+
+  h2 {
+    @apply text-3xl font-bold text-brand-dark-900 sm:text-4xl;
+  }
+
+  input,
+  textarea {
+    @apply w-full bg-transparent py-2.5 px-4 rounded-lg border-2 border-brand-blue-500/20 resize-y focus:border-brand-blue-500 focus:outline-none;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply flex items-center justify-center bg-brand-blue-500 py-2.5 px-6 rounded-full text-white transition-colors hover:bg-brand-blue-700;
+  }
+
+  .btn-secondary {
+    @apply flex items-center justify-center h-12 px-6 rounded-full border-2 border-white text-white transition-colors hover:bg-white hover:text-brand-blue-500;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply max-w-7xl w-full px-5 mx-auto;
+  }
+}
