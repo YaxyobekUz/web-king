@@ -22,6 +22,14 @@
   textarea {
     @apply w-full bg-transparent py-2.5 px-4 rounded-lg border-2 border-brand-blue-500/20 resize-y focus:border-brand-blue-500 focus:outline-none;
   }
+
+  table * {
+    border: 1px solid black !important;
+  }
+
+  table :is(th, td) {
+    padding: 8px;
+  }
 }
 
 @layer components {

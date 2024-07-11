@@ -55,3 +55,24 @@ elRegisterForm.addEventListener("submit", sendRequest);
 IMask(elPhoneNumber, {
   mask: "+{998} (00) 000-00-00",
 });
+
+// responsive header menu
+const elHamburgerBtn = document.querySelector(".js-hamburger-btn");
+const elCloseMenuBtn = document.querySelector(".js-close-menu-btn");
+const elResponsiveMenuRegisterBtn = document.querySelector(
+  ".js-responsive-menu-register-btn"
+);
+const elResponsiveHeaderMenu = document.querySelector(
+  ".js-responsive-header-menu"
+);
+
+elHamburgerBtn.addEventListener("click", () => {
+  elResponsiveHeaderMenu.style.display = "block";
+});
+
+const closeMenu = () => {
+  elResponsiveHeaderMenu.style.display = "none";
+};
+
+elCloseMenuBtn.addEventListener("click", closeMenu);
+elResponsiveHeaderMenu.addEventListener("click", closeMenu);
