@@ -1,3 +1,5 @@
+// import { gallery } from "../data/data";
+
 // comment is not andifayned
 const chatId = -1002173135461;
 const telegramBotId = "7214628321:AAHVYLKbQ3ZzyFlQq5yXuMp7ngp1EutB9uM";
@@ -48,7 +50,6 @@ const sendRequest = (e) => {
   elPhoneNumber.value = "";
   elTelegramUserName.value = "";
 };
-
 elRegisterForm.addEventListener("submit", sendRequest);
 
 // input masks
@@ -75,4 +76,44 @@ const closeMenu = () => {
 };
 
 elCloseMenuBtn.addEventListener("click", closeMenu);
-elResponsiveHeaderMenu.addEventListener("click", closeMenu);
+elResponsiveMenuRegisterBtn.addEventListener("click", closeMenu);
+
+// photogallery
+let isExpand = false;
+const elGallery = document.querySelector(".js-photogallery");
+const elOverlay = document.querySelector(".js-gallery-overlay");
+const elExpandBtn = document.querySelector(".js-toggle-expand-gallery-btn");
+
+const setGallery = (data) => {
+  elGallery.innerHTML = "";
+
+  data.map(
+    (item) =>
+      (elGallery.innerHTML += `<li>
+                <img
+                  width="397"
+                  height="397"
+                  alt="image"
+                  src="${item.image}"
+                  class="w-full h-auto aspect-square object-cover"
+                />
+              </li>`)
+  );
+};
+
+setGallery(gallery.slice(0, 9));
+
+elExpandBtn.addEventListener("click", () => {
+  isExpand = !isExpand;
+  if (isExpand) {
+    setGallery(gallery);
+    elOverlay.style.display = "none";
+    elExpandBtn.style.bottom = "-24px";
+    elExpandBtn.textContent = "Qisqartirish";
+  } else {
+    setGallery(gallery.slice(0, 9));
+    elExpandBtn.style.bottom = "0px";
+    elOverlay.style.display = "block";
+    elExpandBtn.textContent = "Barchasini ko'rsatish";
+  }
+});

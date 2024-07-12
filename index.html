@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web king maktabi</title>
+
+    <!-- css -->
     <link rel="stylesheet" href="/src/output.css" />
   </head>
 
@@ -441,7 +443,7 @@
       </section>
 
       <!-- yt video -->
-      <section class="py-14 md:py-20">
+      <section class="hidden py-14 md:py-20">
         <div class="container !max-w-5xl">
           <div class="flex items-center justify-center">
             <iframe
@@ -453,6 +455,29 @@
               src="https://www.youtube.com/embed/Ngms9WMzMSM?si=qZCpKaHydNi6oekU"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- photo gallery -->
+      <section class="py-14 md:py-20">
+        <div class="container">
+          <h2 class="mb-12 text-center">Fotogalareya</h2>
+
+          <div class="flex items-center justify-center relative">
+            <ul
+              class="js-photogallery grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3"
+            ></ul>
+
+            <div
+              class="js-gallery-overlay absolute inset-x-0 z-10 bottom-0 w-full h-52 from-15% bg-gradient-to-t from-white"
+            ></div>
+
+            <button
+              class="btn-primary js-toggle-expand-gallery-btn absolute bottom-0 z-20"
+            >
+              Barchasini ko'rsatish
+            </button>
           </div>
         </div>
       </section>
@@ -953,8 +978,10 @@
     </footer>
 
     <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
+    <script src="./src/data/data.js"></script>
     <script src="./src/js/script.js"></script>
   </body>
 </html>

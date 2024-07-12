@@ -772,8 +772,17 @@ table :is(th, td) {
   inset: 0px;
 }
 
+.inset-x-0{
+  left: 0px;
+  right: 0px;
+}
+
 .-top-7{
   top: -1.75rem;
+}
+
+.bottom-0{
+  bottom: 0px;
 }
 
 .end-1{
@@ -806,6 +815,10 @@ table :is(th, td) {
 
 .z-10{
   z-index: 10;
+}
+
+.z-20{
+  z-index: 20;
 }
 
 .float-start{
@@ -1012,6 +1025,10 @@ table :is(th, td) {
 
 .h-2{
   height: 0.5rem;
+}
+
+.h-52{
+  height: 13rem;
 }
 
 .h-7{
@@ -1432,6 +1449,10 @@ table :is(th, td) {
 
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-row{
@@ -2309,6 +2330,10 @@ table :is(th, td) {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
+.bg-gradient-to-t{
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
 .bg-working{
   background-image: url(./images/others/working.webp);
 }
@@ -2317,6 +2342,16 @@ table :is(th, td) {
   --tw-gradient-from: #0a43ac var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(10 67 172 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-white{
+  --tw-gradient-from: #fff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-15\%{
+  --tw-gradient-from-position: 15%;
 }
 
 .to-brand-blue-500{
